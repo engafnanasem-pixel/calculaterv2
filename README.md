@@ -26,3 +26,5 @@ A simple Python calculator that performs basic mathematical operations using two
 ```bash
 python3 calculator_v2.py
 
+## Created by Afnan
+
