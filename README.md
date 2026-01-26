@@ -20,11 +20,11 @@ A simple Python calculator that performs basic mathematical operations using two
   - `exit` → to close the program
 
 ---
-
+## Created by Afnan
 ## How to Run ▶️
 
 ```bash
 python3 calculator_v2.py
 
-## Created by Afnan
+
 
