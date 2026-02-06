@@ -3,16 +3,16 @@ def add_history(text):
     history.append(text)
     if len(history) > 5 :
        history.pop(0)
-def add (a,b):
+def add (a, b):
     return a+b ,"😄️"
     
-def subtract (a,b):
+def subtract (a, b):
     return a-b , "🤓️"
    
-def multiply (a,b) :
+def multiply (a, b) :
    return a*b , "🤩️"
    
-def divide (a,b) :
+def divide (a, b) :
    if b==0 :
      return None , "🛑️/you can't divide by zero"
    else :
@@ -25,8 +25,8 @@ def get_nums():
       return a, b 
    except ValueError:
       print("❌️ Please Enter VALID number")
-      return None ,None 
-
+      return None  
+operations = { "+":add , "-":subtract , "*":multiply , "/":divide }
 def main():
    print ("Welcome to the FUN calculater")
    while True :
@@ -67,19 +67,11 @@ def main():
       else:
          
          num1 ,num2 =get_nums()
-         if num1 is None or num2 is None :
-            continue 
-         if choice == "+":
-            result , emoji = add(num1 ,num2 )
-         elif choice == "-":
-            result  , emoji = subtract(num1 ,num2 )
-         elif choice == "*":
-            result , emoji  = multiply(num1 ,num2 )
-         elif choice == "/":
-            result , emoji  = divide(num1 ,num2 )
-            if result is None :
-               print (emoji)
-               continue
+         func = operations[choice]
+         result , emoji = func(num1 , num2)
+         if result is None :
+            print (emoji)
+            continue
          
          
       
